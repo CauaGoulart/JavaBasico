@@ -8,7 +8,6 @@ public class PrincipalCarro {
 	static List<Carro> carros = new ArrayList<Carro>();
 
 	public static void main(String[] args) {
-	
 
 		int opcao = 0;
 		do {
@@ -36,7 +35,7 @@ public class PrincipalCarro {
 
 				for (Carro carro : carros) {
 					if (carro.getAno() >= comeco && carro.getAno() <= fim) {
-						fabricacao += carro.getMarca() + ": " + carro.getAno() + "\n";
+						fabricacao += carro.getMarca() + ": " + carro.getAno() + " e " + carro.getCor().name() + "\n";
 						totalCarrosFabricacao++;
 					}
 				}
@@ -55,14 +54,14 @@ public class PrincipalCarro {
 				int contadorMarca = 0;
 				String pesquisa = JOptionPane.showInputDialog("Digite a marca que deseja procurar.").toUpperCase();
 				for (Carro carro : carros) {
-					if(pesquisa.equals(carro.getMarca())){
-					marca += carro.getMarca() + "\n";
-					contadorMarca++;
+					if (pesquisa.equals(carro.getMarca())) {
+						marca += carro.getMarca() + ": " + carro.getAno() + " e " + carro.getCor().name() + "\n";
+						contadorMarca++;
 					}
 				}
 
 				JOptionPane.showMessageDialog(null, marca);
-				
+
 				double percentualCarrosMarca = (double) contadorMarca / totalMarca * 100;
 				String percentualMarca = String.format("Percentual de carros no período de fabricação: %.2f%%",
 						percentualCarrosMarca);
@@ -70,14 +69,26 @@ public class PrincipalCarro {
 				break;
 
 			case 4:
+				String corDesejada = JOptionPane.showInputDialog("Digite a cor que deseja procurar.");
 				String cor = "";
+				int contadorCor = 0;
 
 				for (Carro carro : carros) {
-					cor += carro.getMarca() + ":" + carro.getCor() + "\n";
+					if (carro.getCor().name().equalsIgnoreCase(corDesejada)) {
+						cor += carro.getMarca() + ": " + carro.getAno() + " e " + carro.getCor().name() + "\n";
+
+						contadorCor++;
+					}
 				}
 
 				JOptionPane.showMessageDialog(null, cor);
+
+				double percentualCarrosCor = (double) contadorCor / carros.size() * 100;
+				String percentualCor = String.format("Percentual de carros com a cor %s: %.2f%%", corDesejada,
+						percentualCarrosCor);
+				JOptionPane.showMessageDialog(null, percentualCor);
 				break;
+
 			default:
 				if (opcao > 5) {
 					JOptionPane.showMessageDialog(null, "Opção Invalida");

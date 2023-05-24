@@ -14,8 +14,8 @@ public class Carro {
 	void cadastra() {
 		marca = JOptionPane.showInputDialog("Marca").toUpperCase();
 		ano = Integer.parseInt(JOptionPane.showInputDialog("Ano"));
-		int opcao = Integer.parseInt(JOptionPane
-				.showInputDialog("Escolha uma cor.\n1-Azul\n2-Verde\n3-Laranja\n4-Vermelho"));
+		int opcao = Integer
+				.parseInt(JOptionPane.showInputDialog("Escolha uma cor.\n1-Azul\n2-Verde\n3-Laranja\n4-Vermelho"));
 
 		switch (opcao) {
 		case 1:
