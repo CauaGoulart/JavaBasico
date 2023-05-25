@@ -20,8 +20,9 @@ public class Util {
 
 	public static Time escolheTimes(List<Time> times) {
 		String menu = "Escolha um time:\n";
-		for (int i = 0; i < times.size(); i++) {
-			menu += (i + 1) + " - Time " + (i + 1) + "\n";
+		int i = 0;
+		for (Time time : times) {
+			menu += (i + 1) + "-"+ time.getNome() + "\n";
 		}
 		int escolha = Integer.parseInt(JOptionPane.showInputDialog(menu));
 		return times.get(escolha - 1);
