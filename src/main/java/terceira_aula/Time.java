@@ -19,6 +19,17 @@ public class Time {
 		setNome(Util.solicitarString("Insira o nome do Time:"));
 	}
 
+	public static void listarJogadores(Time time) {
+		System.out.println("Jogadores do time:" + time.getNome());
+
+		for (Jogador jogador : time.getTime()) {
+			System.out.println("Nome: " + jogador.getNome());
+			System.out.println("Número da camisa: " + jogador.getNumeroCamisa());
+			System.out.println("Quantidade de gols no campeonato: " + jogador.getQuantGolsCampeonato());
+			System.out.println();
+		}
+	}
+
 	public String getNome() {
 		return nome;
 	}

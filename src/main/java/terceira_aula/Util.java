@@ -6,23 +6,10 @@ import javax.swing.JOptionPane;
 
 public class Util {
 	public static int escolheOP() {
-		String menu = "1 – Cadastrar times\n" 
-	            + "2 – Listar todos jogadores de um time\n"
-				+ "3 – Verificar artilheiro do campeonato\n" 
-	            + "4 – Verificar qual time fez mais gols no campeonato\n"
+		String menu = "1 – Cadastrar times\n" + "2 – Listar todos jogadores de um time\n"
+				+ "3 – Verificar artilheiro do campeonato\n" + "4 – Verificar qual time fez mais gols no campeonato\n"
 				+ "5 – Sair\n";
 		return Integer.parseInt(JOptionPane.showInputDialog(menu));
-	}
-
-	public static void listarJogadores(Time time) {
-		System.out.println("Jogadores do time:" + time.getNome());
-
-		for (Jogador jogador : time.getTime()) {
-			System.out.println("Nome: " + jogador.getNome());
-			System.out.println("Número da camisa: " + jogador.getNumeroCamisa());
-			System.out.println("Quantidade de gols no campeonato: " + jogador.getQuantGolsCampeonato());
-			System.out.println();
-		}
 	}
 
 	public static int escolheTimeExistente() {

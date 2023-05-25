@@ -45,7 +45,7 @@ public class Principal {
 					System.out.println("Nenhum time cadastrado.");
 				} else {
 					Time timeEscolhido = Util.escolheTimes(times);
-					Util.listarJogadores(timeEscolhido);
+					Time.listarJogadores(timeEscolhido);
 				}
 				break;
 			case 3:
