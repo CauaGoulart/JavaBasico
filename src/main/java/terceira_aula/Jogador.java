@@ -1,16 +1,14 @@
 package terceira_aula;
 
-import javax.swing.JOptionPane;
-
 public class Jogador {
 	private String nome;
 	private int numeroCamisa;
 	private int quantGolsCampeonato;
 
 	public void cadastro() {
-		setNome(solicitarString("Insira o nome do jogador:"));
-		setNumeroCamisa(solicitarInteiro("Insira o número da camisa:"));
-		setQuantGolsCampeonato(solicitarInteiro("Insira a quantidade de gols que o jogador fez no campeonato:"));
+		setNome(Util.solicitarString("Insira o nome do jogador:"));
+		setNumeroCamisa(Util.solicitarInteiro("Insira o número da camisa:"));
+		setQuantGolsCampeonato(Util.solicitarInteiro("Insira a quantidade de gols que o jogador fez no campeonato:"));
 	}
 
 	public String getNome() {
@@ -37,21 +35,4 @@ public class Jogador {
 		this.quantGolsCampeonato = quantGolsCampeonato;
 	}
 
-	private String solicitarString(String mensagem) {
-		String input = JOptionPane.showInputDialog(mensagem);
-		while (input.trim().isEmpty()) {
-			JOptionPane.showMessageDialog(null, "Valor inválido. Por favor, digite novamente.");
-			input = JOptionPane.showInputDialog(mensagem);
-		}
-		return input;
-	}
-
-	private int solicitarInteiro(String mensagem) {
-		String input = JOptionPane.showInputDialog(mensagem);
-		while (input.trim().isEmpty()) {
-			JOptionPane.showMessageDialog(null, "Valor inválido. Por favor, digite novamente.");
-			input = JOptionPane.showInputDialog(mensagem);
-		}
-		return Integer.parseInt(input);
-	}
 }
