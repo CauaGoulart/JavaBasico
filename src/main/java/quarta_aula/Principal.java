@@ -37,8 +37,7 @@ public class Principal {
 				    System.out.println("Autores disponíveis:");
 				    
 				    for (Autor autor : autores) {
-				    	System.out.println("- " + autor.getNome() + " " + autor.getSobrenome() + " ,Idade: " + autor.getIdade()
-						+ " ,Genero: " + autor.getSexo());
+				    	System.out.println("- " + autor.toString());
 				       
 				    }
 
@@ -54,8 +53,7 @@ public class Principal {
 				                System.out.println("Valor: " + livro.getValor());
 				                System.out.println("Autores:");
 				                for (Autor autor : livro.getAutoresLivro()) {
-				                	System.out.println("- " + autor.getNome() + " " + autor.getSobrenome() + " ,Idade: " + autor.getIdade()
-									+ " ,Genero: " + autor.getSexo());
+				                	System.out.println("- " + autor.toString());
 				                }
 				                System.out.println("--------------------");
 				            }
@@ -81,8 +79,7 @@ public class Principal {
 						System.out.println("Valor: " + livro.getValor());
 						System.out.println("Autores:");
 						for (Autor autor : livro.getAutoresLivro()) {
-							System.out.println("- " + autor.getNome() + " " + autor.getSobrenome() + " ,Idade: " + autor.getIdade()
-							+ " ,Genero: " + autor.getSexo());
+							System.out.println("- " + autor.toString());
 						}
 						System.out.println("--------------------");
 					}
@@ -100,8 +97,7 @@ public class Principal {
 						System.out.println("Valor: " + livro.getValor());
 						System.out.println("Autores:");
 						for (Autor autor : livro.getAutoresLivro()) {
-							System.out.println("- " + autor.getNome() + " " + autor.getSobrenome() + " ,Idade: " + autor.getIdade()
-							+ " ,Genero: " + autor.getSexo());
+							System.out.println("- " + autor.toString());
 						}
 						System.out.println("--------------------");
 					}
@@ -122,8 +118,7 @@ public class Principal {
 						System.out.println("Valor: " + livro.getValor());
 						System.out.println("Autores:");
 						for (Autor autor : livro.getAutoresLivro()) {
-							System.out.println("- " + autor.getNome() + " " + autor.getSobrenome() + " ,Idade: " + autor.getIdade()
-							+ " ,Genero: " + autor.getSexo());
+							System.out.println("- " + autor.toString());
 						}
 						System.out.println("--------------------");
 					}

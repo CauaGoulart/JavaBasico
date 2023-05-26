@@ -43,7 +43,12 @@ public class Autor {
 		}
 	}
 
-	
+	@Override
+	public String toString() {
+
+		return "Nome: " + nome + " " + sobrenome + ", Idade: " + idade + ", Sexo: " + sexo;
+
+	}
 
 	public void setNome(String nome) {
 		this.nome = nome;
