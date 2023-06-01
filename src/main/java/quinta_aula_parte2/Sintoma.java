@@ -1,6 +1,6 @@
 package quinta_aula_parte2;
 
-public enum Sintoma {
+public enum Sintoma { 
     DOR_DE_CABECA("Dor de cabeça"),
     DENGUE("Dengue"),
     PROBLEMAS_INTESTINO("Problemas de intestino");
